@@ -1,0 +1,31 @@
+{
+  "_설명": "데이터 공간 목록 (10/14 — dataspace.py). 공간 하나 = 폴더 하나, 안의 구조는 코드 폴더와 같다(control/records · docgen/records · docgen/outputs). root 가 상대 경로면 이 파일이 있는 코드 폴더 기준이다. id_tag 는 공간마다 달라야 한다 — 사건 번호(EV-…)에 붙어 공간끼리 겹치지 않게 한다. accept_new_sessions = false 인 공간에는 새 관제 세션을 저장하지 않는다(조회 · 그 공간 사건의 문서 만들기만). create_if_missing = true 일 때만, 그 공간에 새 세션을 저장하려는 순간 폴더를 만든다 — 조회할 때는 절대 만들지 않는다.",
+  "spaces": [
+    {
+      "key": "user",
+      "label": "사용자 실행 데이터",
+      "root": ".",
+      "id_tag": "",
+      "run_kind": "시험",
+      "accept_new_sessions": true,
+      "note": "코드 폴더 안의 원래 기록 자리(control/records · docgen/records · docgen/outputs). 대시보드에서 직접 영상을 돌린 기록이 여기 쌓인다."
+    },
+    {
+      "key": "demo1014",
+      "label": "시연 데이터 (10/14 PC 실행)",
+      "root": "../최종본_PC실행_시연로그_20261014/00_관제데이터",
+      "id_tag": "D",
+      "run_kind": "시연",
+      "accept_new_sessions": true,
+      "create_if_missing": false,
+      "note": "10/14 Windows PC 시연 실행 기록. 프로그램을 완전히 끈 뒤 폴더를 옮기면 화면에서 빠지고, 제자리로 돌려놓으면 다시 보인다."
+    }
+  ],
+  "run_kinds": [
+    "시험",
+    "운영",
+    "시연"
+  ],
+  "view_default": "user",
+  "write_default": "user"
+}
